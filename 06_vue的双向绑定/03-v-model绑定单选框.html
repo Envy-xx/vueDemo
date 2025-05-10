@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+      <!-- 单选框 -->
+      <label for="agree">
+        <input v-model="agree" type="checkbox">同意协议
+      </label>
+      <h2>{{ agree }}</h2>
+
+      <!-- 多选框 那么data是一个数组,是将value保存进去 -->
+      <div class="hobbies">
+        <h2>选择爱好</h2>
+        <input type="checkbox" value="sing" v-model="hobbies">sing
+        <input type="checkbox" value="jump" v-model="hobbies">jump
+        <input type="checkbox" value="rap" v-model="hobbies">rap
+      </div>
+      <h2>爱好{{ hobbies }}</h2>
+    </div>
+    <script>
+      //创建app
+      const app = Vue.createApp({
+        
+        data(){
+          return {
+            agree:"",
+            hobbies:[]
+          }
+        },
+        methods:{
+          
+        }
+      })
+      //挂载app
+      app.mount("#app")
+    </script>
+</body>
+</html>

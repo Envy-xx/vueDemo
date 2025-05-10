@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-model="message">
+    <div>{{ message }}</div>
+    
+    <label for="account">
+     <span>账号</span> <input type="text" v-model="account">
+    </label>
+    <label for="password">
+      <span>密码</span><input type="password" v-model="password">
+    </label>
+  </div>
+
+  <script>
+    const app = Vue.createApp({
+      data(){
+        return {
+          message:"hello model",
+          account:"",
+          password:""
+        }
+      },
+      methods:{
+
+      }
+    })
+    app.mount("#app")
+  </script>
+</body>
+</html>

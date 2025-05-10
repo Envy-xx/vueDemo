@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./vue.js"></script>
+</head>
+<body>
+  <!-- v-if v-else v-else-if v-show -->
+    <div id="app">
+      <ul v-if="names.length>0">
+        <div v-for="item in names">{{item}}</div>
+      </ul>
+      <h2 v-else>names长度为0</h2>
+    </div>
+    <script>
+      //创建app
+      const app = Vue.createApp({
+        
+        data(){
+          return {
+            names:["aa","da","daws"]
+          }
+        },
+        methods:{
+          
+        }
+      })
+      //挂载app
+      app.mount("#app")
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./vue.js"></script>
+</head>
+<body>
+    <!-- 其他基本指令
+     v-once v-text v-html -v-pre v-cloak v-bind -->
+    <div id="app">
+      <h2>{{ mes }}</h2>
+      <h2 v-once>{{ counter }}</h2>
+      <button @click="changemes">changemes</button>
+      <button @click="changenum">changenum</button>
+      <a href=""></a>
+    </div>
+    <script>
+      //创建app
+      const app = Vue.createApp({
+      
+        data(){
+          return {
+            mes:"hello vue",
+            counter:0
+          }
+        },
+        methods:{
+          changemes(){
+            this.mes = "hello VUE"
+          },
+          changenum(){
+            this.counter++
+          }
+        }
+      })
+      //挂载app
+      app.mount("#app")
+    </script>
+</body>
+</html>

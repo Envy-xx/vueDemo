@@ -1,0 +1,33 @@
+const books =[ 
+  {
+  id:1,
+  name:"aa",
+  date:"2005",
+  price:10,
+  counter:1
+  },
+  {
+    id:2,
+    name:"bb",
+   price:"10",
+   date:"2005",
+   price:20,
+   counter:1
+  },
+  {
+    id:3,
+    name:"cc",
+  price:"10",
+  date:"2005",
+  price:30,
+  counter:1
+  },
+  {
+    id:4,
+    name:"dd",
+  price:"10",
+  date:"2005",
+  price:40,
+  counter:1
+    }
+]

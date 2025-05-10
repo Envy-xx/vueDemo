@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    const app = Vue.createApp({
+      template:
+        `<h1>{{message}}</h1>
+        <ul ><li>{{student[0]}}</li>
+            <li>{{student[1]}}</li>
+            <li>{{student[2]}}</li> </ul>`,
+      data:function(){
+        return {
+          title:"this is title",
+          message:"this is student list",
+          student:["li hua","zhang si","li si"]
+        }
+      }
+    })
+    app.mount("#app")
+  </script>
+</body>
+</html>

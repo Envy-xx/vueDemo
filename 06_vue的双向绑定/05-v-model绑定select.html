@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+    <select name="" id="" v-model="like">
+      <option value="apple" >苹果</option>
+      <option value="orange" >橘子</option>
+      <option value="watermelon" >西瓜</option>
+    </select>
+    <h2>{{ like }}</h2>
+    </div>
+    <script>
+      //创建app
+      const app = Vue.createApp({
+        
+        data(){
+          return {
+            like:"apple",
+            likes:[]
+          }
+        },
+        methods:{
+          
+        }
+      })
+      //挂载app
+      app.mount("#app")
+    </script>
+</body>
+</html>

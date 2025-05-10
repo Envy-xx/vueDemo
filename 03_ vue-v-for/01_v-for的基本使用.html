@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./vue.js"></script>
+  <style>
+    .item{
+      margin-top: 5px;
+      background-color: peru;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h2>{{ title }}</h2>
+    <div :class="{'item':true}" v-for="(item,key1) in itemList">
+     <span>商品序列:{{key1+1}}-{{item.id}}</span>
+     <h3>商品名称:{{ item.title }}</h3>
+     <h4>商品价格:{{ item.price }}</h4>
+    </div>
+  </div>
+  <script>
+    const app = Vue.createApp({
+      data(){
+        return {
+          title:"商品列表",
+          itemList:[
+            {id:1,title:"maxbook",price:"100"},
+            {id:2,title:"phone",price:"1000"},
+            {id:3,title:"book",price:"10"}
+          ]
+        }
+      }
+    })
+    app.mount("#app")
+  </script>
+    
+  
+</body>
+</html>

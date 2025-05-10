@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="item in names">{{ item }}</li>
+    </ul> 
+  <button @click="changeArray">点击更新</button>
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      data(){
+        return{
+          names:["hah","da","dwafa"],
+          
+        }
+      },
+      methods:{
+        changeArray(){
+          // this.names = []
+          //  this.names.push("aa")
+          // this.names.pop()
+          // this.names = this.names.reverse()
+        }
+      }
+    })
+    
+    app.mount('#app')
+  </script>
+</body>
+</html>

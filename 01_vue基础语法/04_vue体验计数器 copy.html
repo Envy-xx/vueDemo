@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+</head>
+<body>
+  <div id="app"></div>
+  <template>
+
+  </template>
+  <script>
+    const app = Vue.createApp({
+      template:`<h1>{{counter}}</h1>
+      <button @click="add">点击加一</button>
+      <button @click="remove">点击减一</button>`,
+      data:function(){
+        return {
+          counter:0
+        }
+      },
+      methods:{
+        add(){
+         this.counter++
+        },
+        remove(){
+         this.counter--
+        }
+      }
+    })
+    app.mount("#app")
+  </script>
+</body>
+</html>
