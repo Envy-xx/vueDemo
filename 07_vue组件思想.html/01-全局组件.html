@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <product-item></product-item>
+  </div>
+  <script>
+    const APP = {
+      data(){
+        return 
+      },
+      methods:{
+
+      }
+    }
+
+    const product = {
+      template:`<div>我是内容</div>`
+    }
+    const app = Vue.createApp(APP)
+    //注册了一个全局组件 可以在任何组件中使用
+    app.component("product-item",product)
+    app.mount("#app")
+  </script>
+
+</body>
+</html>
